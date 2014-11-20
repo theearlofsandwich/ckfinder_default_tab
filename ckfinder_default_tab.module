@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * @file
+ * Written by Ian Flory
+ */
+
+/**
+ * Implementation of hook_wysiwyg_plugin().
+ */
+function ckfinder_default_tab_wysiwyg_plugin($editor, $version) {
+  if ($editor == 'ckeditor') {
+    return array('cdt_path' => array(
+      'path' => drupal_get_path('module', 'ckfinder_default_tab') .'/plugins/cdt/',
+      'load' => TRUE,
+      'extensions' => array('Link' => t('CKFinder Default Tab')),
+    ));
+  }
+}
+
+
+/**
+ * Implements hook_init();
+ */
+function ckfinder_default_tab_init(){
+    //global $theme_key;
+    //if ($theme_key == "bartik") {
+        // Do something with the library here.
+        $path = drupal_get_path('module', 'ckfinder_default_tab');
+        
+//        drupal_add_css($path .'/caption.css', array(
+//              'type' => 'file',
+//              'every_page' => TRUE,
+//            )
+//        );
+//
+//        drupal_add_js($path .'/js/caption.js', array(
+//              'type' => 'file',
+//              'every_page' => TRUE,
+//            )
+//        );
+
+    //}
+}

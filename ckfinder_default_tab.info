@@ -1,0 +1,4 @@
+name = CKFinder default tab
+description = Makes the image upload tab default to send to server.
+package = User interface
+core = 7.x
